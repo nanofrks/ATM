@@ -7,62 +7,43 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal[400],
+
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        
         children: [
-          const Center(
-            child: Text(
-              'Inicia sesion ',
-              style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold)),
+
+          //contenedor que tiene el gradiente del fondo
+          Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: <Color>[
+               Color.fromRGBO(0, 74, 173, 1),
+               Color.fromRGBO(203, 108, 230, 1),
+              ],
+            ),
+            ),
+
+            child: ListView(
+              children: <Widget>[
+                Container(
+                  margin: const EdgeInsets.all(25.0),
+                  height: MediaQuery.of(context).size.height/1.06,
+                  color: const Color.fromRGBO(0, 28, 66, 1),
+
+
+                )
+              ],
+            )
           ),
 
-        SizedBox(height: 150),
 
-          const Center(
-            child: Text(
-              'Usuario',
-              style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold)),
-          ),
-
-          SizedBox(
-            width: 200,
-            height: 90,
-            child: TextFormField(
-              style: TextStyle(
-                color: Colors.lightBlue[50]
-              ),
-            )),
-
-          const Center(
-            child: Text(
-              'Contraseña',
-              style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold)),
-          ),
-          
-          SizedBox(
-            width: 200,
-            height: 90,
-            child: TextFormField(
-              style: TextStyle(
-                color: Colors.lightBlue[50]
-              )
-            )),
-
-          ElevatedButton(
-            onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_)=> const Homeview()));
-              print('presionó :OOOOOO');
-            }, 
-            child: const Text('Iniciar sesión :DDDDDDD'))
+        
         ],
       ),
     );
+
   }
 }
