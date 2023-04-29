@@ -94,6 +94,8 @@ class LoginView extends StatelessWidget {
                         alignment: Alignment.center,
                         height: 120,
                         ),
+                      
+                      //ir a registrarse
                       TextButton(
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (_)=> const Registerview()));
@@ -112,9 +114,6 @@ class LoginView extends StatelessWidget {
               ],
             )
           ),
-
-
-        
         ],
       ),
     );
