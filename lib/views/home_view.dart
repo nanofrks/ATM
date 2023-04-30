@@ -1,3 +1,4 @@
+import 'package:atm_ingsoftware/views/login_view.dart';
 import 'package:flutter/material.dart';
 
 class Homeview extends StatelessWidget{
@@ -27,21 +28,40 @@ class Homeview extends StatelessWidget{
 
           //contenedor azul
           Container(
-                  padding: const EdgeInsets.only(top:120, bottom:120),
+                  padding: const EdgeInsets.only(top:30,bottom:120),
                   margin: const EdgeInsets.all(45),
                   height: MediaQuery.of(context).size.height/1.1,
                   color: const Color.fromRGBO(0, 28, 66, 1),
-                  child: ListView( //todo el contenido que está en pantalla
-                    children: const <Widget>[
-                      Image(image: AssetImage('assets/images/nyapo.png')),
-                      Image(image: AssetImage('assets/images/aslitann.png')),
-                      Image(image: AssetImage('assets/images/lunita.png')),
-                
-                    ],
+                  child: Stack(
+                    children: [
+                      ListView( //todo el contenido que está en pantalla
+                      children: const <Widget>[
+                        Image(image: AssetImage('assets/images/nyapo.png')),
+                        Image(image: AssetImage('assets/images/aslitann.png')),
+                        Image(image: AssetImage('assets/images/lunita.png')),
+                      ],
+                      ),
+                      ElevatedButton(
+
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color.fromRGBO(203, 108, 230, 1),
+                          fixedSize: const Size(350, 50),
+                        ),
+                        child: const Text(
+                          'Obtener más gatitos',
+                          style: TextStyle(
+                            color: Color.fromRGBO(255, 187, 234, 1),
+                            fontFamily: 'RetroGaming',
+                            fontSize: 17,
+                          ),
+                        ),
+                       onPressed: () {
+                        },
+                      ),
+                    ]
                   )
           ),
 
-          
         ]
       )
     );
