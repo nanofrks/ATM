@@ -25,8 +25,9 @@ class Homeview extends StatelessWidget{
             ),
           ),
 
+          //contenedor azul
           Container(
-                  padding: const EdgeInsets.only(left: 2, right: 2, top:120, bottom:120),
+                  padding: const EdgeInsets.only(top:120, bottom:120),
                   margin: const EdgeInsets.all(45),
                   height: MediaQuery.of(context).size.height/1.1,
                   color: const Color.fromRGBO(0, 28, 66, 1),
