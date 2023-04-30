@@ -70,6 +70,30 @@ class LoginView extends StatelessWidget {
                           ),
                         )),
 
+                      //ingresar contraseña
+                      SizedBox(
+                        width: 200,
+                        height: 90,
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: 'Contraseña',
+                            hintStyle: TextStyle(
+                              color: Colors.lightBlue[50],
+                            ),
+                            floatingLabelBehavior: FloatingLabelBehavior.never,
+                            border: const UnderlineInputBorder(),
+                            prefixIcon: const Icon(Icons.lock),
+                            prefixIconColor: Colors.lightBlue[50],
+                            
+                          ),
+                          maxLength: 10,
+                          textAlign: TextAlign.left,
+                          cursorColor: const Color.fromRGBO(203, 108, 230, 1),
+                          style: TextStyle(
+                            color: Colors.lightBlue[50]
+                          ),
+                        )),
+
                       //botón iniciar
                       ElevatedButton(
                         onPressed: (){
