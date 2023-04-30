@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
-
 class Registerview extends StatelessWidget{
   const Registerview({super.key});
 

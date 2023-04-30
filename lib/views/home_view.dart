@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
-
 class Homeview extends StatelessWidget{
   const Homeview({super.key});
 
@@ -27,16 +25,22 @@ class Homeview extends StatelessWidget{
             ),
           ),
 
-          ListView( //todo el contenido que está en pantalla
-              children: <Widget>[
-                Container(
-                  padding: const EdgeInsets.only(left: 128, right: 128),
+          Container(
+                  padding: const EdgeInsets.only(left: 2, right: 2, top:120, bottom:120),
                   margin: const EdgeInsets.all(45),
                   height: MediaQuery.of(context).size.height/1.1,
                   color: const Color.fromRGBO(0, 28, 66, 1),
-                )
-              ],
-          )
+                  child: ListView( //todo el contenido que está en pantalla
+                    children: const <Widget>[
+                      Image(image: AssetImage('assets/images/nyapo.png')),
+                      Image(image: AssetImage('assets/images/aslitann.png')),
+                      Image(image: AssetImage('assets/images/lunita.png')),
+                
+                    ],
+                  )
+          ),
+
+          
         ]
       )
     );
