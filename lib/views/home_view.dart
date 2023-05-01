@@ -83,12 +83,47 @@ class Homeview extends StatelessWidget{
                             fontSize: 17,
                           ),
                           ),
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (_)=> const PrintView()));
-                          },
+                          onPressed:() {
+                            showDialog(context: context,
+                             builder: (BuildContext context){
+                              return Dialog(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0)),
+                                  child: Container(
+                                    height: 200,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          const Text(
+                                            'Imprimiendo...',
+                                            style: TextStyle(
+                                              color: Color.fromRGBO(255, 187, 234, 1),
+                                              fontFamily: 'RetroGaming',
+                                              fontSize: 17,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 20),
+                                          CircularProgressIndicator(
+                                            valueColor:
+                                            AlwaysStoppedAnimation( Colors.blue.shade300),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                backgroundColor: const Color.fromRGBO(120, 67, 230,1),
+                              );
+                              }
+                            );
+                          }
+                          )
                         ),
-                        ),
+                        
                         const SizedBox(height: 10),
+
                         Center(
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -123,7 +158,40 @@ class Homeview extends StatelessWidget{
                           ),
                           ),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (_)=> const PrintView()));
+                            showDialog(context: context,
+                             builder: (BuildContext context){
+                              return Dialog(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0)),
+                                  child: Container(
+                                    height: 200,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          const Text(
+                                            'Imprimiendo...',
+                                            style: TextStyle(
+                                              color: Color.fromRGBO(255, 187, 234, 1),
+                                              fontFamily: 'RetroGaming',
+                                              fontSize: 17,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 20),
+                                          CircularProgressIndicator(
+                                            valueColor:
+                                            AlwaysStoppedAnimation( Colors.blue.shade300),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                backgroundColor: const Color.fromRGBO(120, 67, 230,1),
+                              );
+                              }
+                            );
                           },
                         ),
                         ),
@@ -164,7 +232,40 @@ class Homeview extends StatelessWidget{
                           ),
                           ),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (_)=> const PrintView()));
+                            showDialog(context: context,
+                             builder: (BuildContext context){
+                              return Dialog(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0)),
+                                  child: Container(
+                                    height: 200,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          const Text(
+                                            'Imprimiendo...',
+                                            style: TextStyle(
+                                              color: Color.fromRGBO(255, 187, 234, 1),
+                                              fontFamily: 'RetroGaming',
+                                              fontSize: 17,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 20),
+                                          CircularProgressIndicator(
+                                            valueColor:
+                                            AlwaysStoppedAnimation( Colors.blue.shade300),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                backgroundColor: const Color.fromRGBO(120, 67, 230,1),
+                              );
+                              }
+                            );
                           },
                         ),
                         ),
@@ -224,4 +325,5 @@ class Homeview extends StatelessWidget{
     );
   }
 
+  
 }

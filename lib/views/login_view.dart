@@ -61,32 +61,6 @@ class LoginView extends StatelessWidget {
                             
                           ),
                           maxLength: 10,
-                          keyboardType: TextInputType.number,
-                          inputFormatters: <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly],
-                          textAlign: TextAlign.left,
-                          cursorColor: const Color.fromRGBO(203, 108, 230, 1),
-                          style: TextStyle(
-                            color: Colors.lightBlue[50]
-                          ),
-                        )),
-
-                      //ingresar contraseña
-                      SizedBox(
-                        width: 200,
-                        height: 90,
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                            hintText: 'Contraseña',
-                            hintStyle: TextStyle(
-                              color: Colors.lightBlue[50],
-                            ),
-                            floatingLabelBehavior: FloatingLabelBehavior.never,
-                            border: const UnderlineInputBorder(),
-                            prefixIcon: const Icon(Icons.lock),
-                            prefixIconColor: Colors.lightBlue[50],
-                            
-                          ),
-                          maxLength: 10,
                           textAlign: TextAlign.left,
                           cursorColor: const Color.fromRGBO(203, 108, 230, 1),
                           style: TextStyle(
@@ -130,10 +104,8 @@ class LoginView extends StatelessWidget {
                             color: Color.fromRGBO(203, 108, 230, 1)
                           ),
                         ))
-
                     ]
                   )
-
                 )
               ],
             )
@@ -141,6 +113,5 @@ class LoginView extends StatelessWidget {
         ],
       ),
     );
-
   }
 }
