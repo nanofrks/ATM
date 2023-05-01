@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'login_view.dart';
+
 class GetView extends StatelessWidget{
   const GetView ({super.key});
 
@@ -7,20 +9,45 @@ class GetView extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.black45,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Stack(
         children: [
-          ElevatedButton(
-            onPressed: (){
-              Navigator.pop(context);
-              }, 
-              child: Text('Volver')),
 
-          ElevatedButton(
-            onPressed: (){
+          //degradado del fondo
+          Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: <Color>[
+               Color.fromRGBO(0, 74, 173, 1),
+               Color.fromRGBO(203, 108, 230, 1),
+              ],
+            ),
+            ),
+          ),
 
-            },
-            child: Text('Set name'))
+          ListView( //todo el contenido que está en pantalla
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.only(left: 128, right: 128),
+                  margin: const EdgeInsets.all(45),
+                  height: MediaQuery.of(context).size.height/1.1,
+                  color: const Color.fromRGBO(0, 28, 66, 1),
+                  child: Row(
+                    children: <Widget>[
+                      ElevatedButton(
+                        onPressed:  () {
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=> const LoginView()));
+                        }, 
+                        child: const Text(
+                          'Volver',
+                        )
+                        ),
+                    ],
+                  )
+                )
+              ],
+          )
         ],
       )
     );

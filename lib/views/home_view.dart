@@ -1,6 +1,5 @@
 import 'package:atm_ingsoftware/views/get.dart';
 import 'package:atm_ingsoftware/views/login_view.dart';
-import 'package:atm_ingsoftware/views/print.dart';
 import 'package:atm_ingsoftware/views/send.dart';
 import 'package:flutter/material.dart';
 
@@ -87,9 +86,10 @@ class Homeview extends StatelessWidget{
                             showDialog(context: context,
                              builder: (BuildContext context){
                               return Dialog(
+                                backgroundColor: const Color.fromRGBO(120, 67, 230,1),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20.0)),
-                                  child: Container(
+                                  child: SizedBox(
                                     height: 200,
                                     child: Padding(
                                       padding: const EdgeInsets.all(12.0),
@@ -114,7 +114,6 @@ class Homeview extends StatelessWidget{
                                       ),
                                     ),
                                   ),
-                                backgroundColor: const Color.fromRGBO(120, 67, 230,1),
                               );
                               }
                             );
@@ -161,9 +160,10 @@ class Homeview extends StatelessWidget{
                             showDialog(context: context,
                              builder: (BuildContext context){
                               return Dialog(
+                                backgroundColor: const Color.fromRGBO(120, 67, 230,1),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20.0)),
-                                  child: Container(
+                                  child: SizedBox(
                                     height: 200,
                                     child: Padding(
                                       padding: const EdgeInsets.all(12.0),
@@ -188,7 +188,7 @@ class Homeview extends StatelessWidget{
                                       ),
                                     ),
                                   ),
-                                backgroundColor: const Color.fromRGBO(120, 67, 230,1),
+                                
                               );
                               }
                             );
@@ -235,9 +235,10 @@ class Homeview extends StatelessWidget{
                             showDialog(context: context,
                              builder: (BuildContext context){
                               return Dialog(
+                                backgroundColor: const Color.fromRGBO(120, 67, 230,1),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20.0)),
-                                  child: Container(
+                                  child: SizedBox(
                                     height: 200,
                                     child: Padding(
                                       padding: const EdgeInsets.all(12.0),
@@ -262,7 +263,7 @@ class Homeview extends StatelessWidget{
                                       ),
                                     ),
                                   ),
-                                backgroundColor: const Color.fromRGBO(120, 67, 230,1),
+                                
                               );
                               }
                             );

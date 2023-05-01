@@ -1,7 +1,6 @@
 import 'package:atm_ingsoftware/views/register.dart';
 import 'package:flutter/material.dart';
 import 'package:atm_ingsoftware/views/home_view.dart';
-import 'package:flutter/services.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -37,7 +36,7 @@ class LoginView extends StatelessWidget {
 
                   child: ListView( //contenido dentro del contenedor azul
                     children: <Widget>[
-                      const SizedBox(height: 150),
+                      const SizedBox(height: 90),
 
                       //logo
                       const Center(
@@ -57,6 +56,30 @@ class LoginView extends StatelessWidget {
                             floatingLabelBehavior: FloatingLabelBehavior.never,
                             border: const UnderlineInputBorder(),
                             prefixIcon: const Icon(Icons.person),
+                            prefixIconColor: Colors.lightBlue[50],
+                            
+                          ),
+                          maxLength: 10,
+                          textAlign: TextAlign.left,
+                          cursorColor: const Color.fromRGBO(203, 108, 230, 1),
+                          style: TextStyle(
+                            color: Colors.lightBlue[50]
+                          ),
+                        )),
+
+                      //ingresar contraseña
+                      SizedBox(
+                        width: 200,
+                        height: 90,
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: 'Contraseña',
+                            hintStyle: TextStyle(
+                              color: Colors.lightBlue[50],
+                            ),
+                            floatingLabelBehavior: FloatingLabelBehavior.never,
+                            border: const UnderlineInputBorder(),
+                            prefixIcon: const Icon(Icons.lock),
                             prefixIconColor: Colors.lightBlue[50],
                             
                           ),

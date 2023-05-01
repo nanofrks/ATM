@@ -14,13 +14,13 @@ class SendView extends StatelessWidget{
             onPressed: (){
               Navigator.pop(context);
               }, 
-              child: Text('Volver')),
+              child: const Text('Volver')),
 
           ElevatedButton(
             onPressed: (){
 
             },
-            child: Text('Set name'))
+            child: const Text('Set name'))
         ],
       )
     );
