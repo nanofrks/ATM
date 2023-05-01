@@ -72,6 +72,7 @@ class LoginView extends StatelessWidget {
                         width: 200,
                         height: 90,
                         child: TextFormField(
+                          obscureText: true,
                           decoration: InputDecoration(
                             hintText: 'Contraseña',
                             hintStyle: TextStyle(
